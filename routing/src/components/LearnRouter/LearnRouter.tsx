@@ -4,6 +4,7 @@ import About from '../About/About';
 import Products from '../Products/Products';
 import { NavBar } from '../NavBar/NavBar';
 import { arrForNav } from '../../types';
+import ProductFullPage from '../ProductFullPage/ProductFullPage';
 
 
 export const LearnRouter = () => {
@@ -15,6 +16,7 @@ export const LearnRouter = () => {
                     <Route path="/" element=<Home /> />
                     <Route path="/about" element=<About /> />
                     <Route path="/products" element=<Products /> />
+                    <Route path="/product-full-page/:id" element=<ProductFullPage /> />
                 </Routes>
                 <div>this is my footer</div>
             </BrowserRouter>
