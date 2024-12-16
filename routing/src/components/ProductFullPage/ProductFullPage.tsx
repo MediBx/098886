@@ -7,6 +7,7 @@ const ProductFullPage = () => {
 
     return (
         <div>
+            {+(productId!) === 4 && <p>this is number 4</p>}
             product {productId}
         </div>
     )
