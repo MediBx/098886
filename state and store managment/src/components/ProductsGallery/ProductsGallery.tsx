@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./ProductsGallery.css"
 import { Product } from '../../types';
+import ProductCard from "../ProductCard/ProductCard";
 
 const ProductsGallery = () => {
     const url = "http://127.0.0.1:5000/products";
@@ -17,9 +18,9 @@ const ProductsGallery = () => {
 
     return (
         <div>
-            {arrOfProducts && arrOfProducts?.map((curr) => {
+            {arrOfProducts && arrOfProducts?.map(({ id, name, isFavorite }) => {
                 return (
-                    <div></div>
+                    <ProductCard id={id} name={name} isFavorite={isFavorite} />
                 )
             })}
         </div>
