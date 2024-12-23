@@ -2,16 +2,20 @@ import { Product } from '../../types'
 import './BigCard.css'
 
 interface BigCardProps {
-    product: Product
+    clickedProduct: Product | undefined
 }
 
 
-const BigCard: React.FC<BigCardProps> = ({ product }) => {
+const BigCard: React.FC<BigCardProps> = ({ clickedProduct }) => {
     return (
         <div>
-            <div>{product.id}</div>
-            <div>{product.name}</div>
-            <div>{product.isFavorite ? "Favorite" : "NOT Favorite"}</div>
+            {clickedProduct &&
+                <>
+                    <div>{clickedProduct.id}</div>
+                    <div>{clickedProduct.name}</div>
+                    <div>{clickedProduct.isFavorite ? "Favorite" : "NOT Favorite"}</div>
+                </>
+            }
         </div>
     )
 }
