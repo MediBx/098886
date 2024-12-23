@@ -18,9 +18,9 @@ const ProductsGallery = () => {
 
     return (
         <div>
-            {arrOfProducts && arrOfProducts?.map(({ id, name, isFavorite }) => {
+            {arrOfProducts && arrOfProducts?.map(({ id, name }) => {
                 return (
-                    <ProductCard id={id} name={name} isFavorite={isFavorite} />
+                    <ProductCard id={id} name={name} />
                 )
             })}
         </div>
