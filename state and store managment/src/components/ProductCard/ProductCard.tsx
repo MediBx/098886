@@ -6,9 +6,11 @@ interface ProductCardProps {
     isFavorite: boolean;
 }
 
+const cardWasClicked = () => { }
+
 const ProductCard: React.FC<ProductCardProps> = ({ id, name, isFavorite }) => {
     return (
-        <div>
+        <div onClick={cardWasClicked}>
             <div>{id}</div>
             <div>{name}</div>
             <div>{isFavorite}</div>

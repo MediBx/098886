@@ -1,20 +1,12 @@
-export type NavItem = {
-    displayStr: string;
-    hrefStr: string;
+// src/types.ts
+export interface Product {
+    id: number;
+    name: string;
+    isFavorite: boolean;
 }
 
-
-export let arrForNav = [
-    {
-        displayStr: "Home",
-        hrefStr: "/"
-    },
-    {
-        displayStr: "About",
-        hrefStr: "/about"
-    },
-    {
-        displayStr: "Prroducts",
-        hrefStr: "/products"
-    },
-]
+export interface City {
+    id: number;
+    name: string;
+    isFavorite: boolean;
+}
