@@ -18,6 +18,17 @@ class MyComponent extends React.Component<{}, MyComponentState> {
         console.log("componentDidMount: Component was added to the DOM");
     }
 
+
+    shouldComponentUpdate(nextProps: Readonly<{}>, nextState: Readonly<MyComponentState>): boolean {
+        console.log("shouldComponentUpdate: Deciding if re-render is needed");
+        return true; // Always re-render
+    }
+
+    componentDidUpdate(prevProps: Readonly<{}>, prevState: Readonly<MyComponentState>): void {
+        console.log("componentDidUpdate: Component was updated");
+    }
+
+
     render() {
         return (
             <div>
