@@ -23,6 +23,11 @@ app.get('/products', (req, res) => {
     res.json(products);
 });
 
+
+app.get('/products/:id', (req, res) => {
+    res.send(products[(+req.params.id) + 1]);
+})
+
 app.get('/cities', (req, res) => {
     res.json(cities);
 });
