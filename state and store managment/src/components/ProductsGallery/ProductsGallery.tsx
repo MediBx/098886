@@ -9,6 +9,7 @@ interface ProductsGalleryProps {
 
 const ProductsGallery: React.FC<ProductsGalleryProps> = ({ setClickedProduct }) => {
     const url = "http://127.0.0.1:5000/products";
+
     const [arrOfProducts, setArrOfProducts] = useState<Product[]>();
 
     useEffect(() => {
